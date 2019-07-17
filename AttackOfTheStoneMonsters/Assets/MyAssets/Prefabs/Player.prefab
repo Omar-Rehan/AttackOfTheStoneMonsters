@@ -185,11 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f32b81e93fa36f45ad625a09f85296a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalBullet: {fileID: 2752846241005112966, guid: 93e2c6aff1de32745baf0ac2e0d44fa3,
-    type: 3}
-  seekerBullet: {fileID: 5288730137653050328, guid: 5fe3a11b9fed72346b84329abf236a7b,
-    type: 3}
   shootingPoint: {fileID: 4526557636763870525}
+  BulletTypes:
+  - {fileID: 2752846241005112966, guid: 93e2c6aff1de32745baf0ac2e0d44fa3, type: 3}
+  - {fileID: 5288730137653050328, guid: 5fe3a11b9fed72346b84329abf236a7b, type: 3}
 --- !u!114 &4526557638288725626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,8 +242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2543a00aad91a0f4297f8b1b217a6818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  coolDownBar: {fileID: 0}
+  scoreText: {fileID: 3796658594723757280, guid: 8161a4214c74fdf498ff87929f80d2de,
+    type: 3}
+  coolDownBar: {fileID: 6893482142299540585, guid: 738374e82f5dd82429e43245f6dc315f,
+    type: 3}
 --- !u!1001 &4526557636715769857
 PrefabInstance:
   m_ObjectHideFlags: 0

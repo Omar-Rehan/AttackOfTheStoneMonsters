@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class BulletController : MonoBehaviour {
     // My components
@@ -16,17 +17,21 @@ public class BulletController : MonoBehaviour {
         _rigidbody.AddForce(transform.up * thrust);
     }
 
-    void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "Floor") {
-            Destroy(gameObject);
-        }
-    }
+    //void OnCollisionEnter(Collision other) {
+    //    if (other.gameObject.tag == "Floor") {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Enemy") {
             PlayerManager.score += 2;
-            Destroy(other.gameObject);
+            other.GetComponent<EnemyController>().KillOwner();            
             Destroy(gameObject);
         }
+    }
+    IEnumerator KillEnemy(Collider enemy) {
+        yield return new WaitForSeconds(1);
+        
     }
 }
